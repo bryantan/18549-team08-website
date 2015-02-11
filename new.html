@@ -12,16 +12,22 @@
 
         <!-- NOTE: each "window" is a section element with class .window -->
 
-        <section id="0" class="window">
+        <section id="0" class="window" name="title">
             <div class="content">
                     <h1>placeholder</h1>
                     <h2>concept sentence 1. concept sentence 2.</h2>
+            </div>
+            <div class="links">
+                <a href="#1">motivation</a> - 
+                <a href="#2">competitive analysis</a> - 
+                <a href="#3">requirements</a> - 
+                <a href="#4">technical specifications</a>
             </div>
         </section>
 
         <section id="1" class="window">
             <div class="content">
-                <h2>motivation</h2>
+                <h2>why?</h2>
                 <div class="explanation">
                     motivation sentence 1. motivation sentence 2. motivation sentence 3.
                 </div>
@@ -30,9 +36,13 @@
 
         <section id="2" class="window">
             <div class="content">
-                <h2>competitive analysis</h2>
+                <h2>what about...</h2>
                 <div class="explanation">
-                    motivation sentence 1. motivation sentence 2. motivation sentence 3.
+                    <ul>
+                        <li><a href="http://www.digitaltrends.com/home/pixie-points-help-you-find-lost-keys-pets-and-more/">Pixie</a>? It relies on the use of a phone.</li>
+                        <li><a href="http://www.wsj.com/articles/finding-the-best-lost-item-trackers-tile-trackr-and-duet-reviewed-1403046981">Duet or Tile or TrackR</a> or <a href="http://www.amazon.com/Smead-Stick-N-Find-Bluetooth-Location-02218/dp/B00CRJD7GQ">Stick-N-Find</a>? Again, phone.</li>
+                        <li><a href="http://www.amazon.com/Bounty-Hunter-Tracker-Metal-Detector/dp/B00005A3L1">A metal detector</a>? Well...</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -41,7 +51,13 @@
             <div class="content">
                 <h2>requirements</h2>
                 <div class="explanation">
-                    motivation sentence 1. motivation sentence 2. motivation sentence 3.
+                    <ul>
+                        <li><strong>Functional:</strong> aaa</li>
+                        <li><strong>Timing:</strong></li>
+                        <li><strong>Reliability:</strong></li>
+                        <li><strong></strong></li>
+                        <li><strong></strong></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -50,7 +66,30 @@
             <div class="content">
                 <h2>technical specifications</h2>
                 <div class="explanation">
-                    motivation sentence 1. motivation sentence 2. motivation sentence 3.
+                    <div class="column-left">
+                        <h3><strong>Hardware Components</strong></h3>
+                        <ul>
+                            <li>uDoo</li>
+                            <li>Gimbal</li>
+                            <li>RFduino</li>
+                        </ul>
+                    </div>
+                    <div class="column-center">
+                        <h3><strong>Software Components</strong></h3>
+                        <ul>
+                            <li>Django</li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="column-right">
+                        <h3><strong>Protocols</strong></h3>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -139,6 +178,19 @@
                     onScroll: function(s){},
                     onSnapComplete: function($el){},
                     onWindowEnter: function($el){}
+                });
+                
+                $('a[href^="#"]').on('click',function (e) {
+                    e.preventDefault();
+
+                    var target = this.hash;
+                    var $target = $(target);
+
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top
+                    }, 900, 'swing', function () {
+                        window.location.hash = target;
+                    });
                 });
 
             });
