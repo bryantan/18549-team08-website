@@ -427,3 +427,24 @@ html, body {
   background: #231f20;
   top: 500%;
 }
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul.bullet {
+  margin-left: 20px;
+  font-size: 14pt;
+}
+
+body li {
+  color: #A6B4C4;
+}
+
+.itemTitle {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
+}

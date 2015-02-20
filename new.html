@@ -20,30 +20,48 @@
                 </div>
             </div>
             <div class="links">
-                <a href="#1">motivation</a> - 
-                <a href="#2">competitive analysis</a> - 
-                <a href="#3">requirements</a> - 
-                <a href="#4">technical specifications</a>
+                <a href="#1">Motivation</a> - 
+                <a href="#2">Competitive Analysis</a> - 
+                <a href="#3">Requirements</a> - 
+                <a href="#4">Technical Specifications</a>
             </div>
         </section>
 
         <section id="1" class="window">
             <div class="content">
-                <h2>why?</h2>
+                <h2>Looking for something?</h2>
                 <div class="explanation">
-                    motivation sentence 1. motivation sentence 2. motivation sentence 3.
+                    Never want to lose anything again? With our home system, you'll never lose track of where your keys or other important items are in the house!
                 </div>
+                <img class="center" src="http://i.imgur.com/IPIU8yj.jpg" />
             </div>
         </section>
 
         <section id="2" class="window">
             <div class="content">
-                <h2>what about...</h2>
+                <h2>Competitive Analysis</h2>
                 <div class="explanation">
                     <ul>
-                        <li><a href="http://www.digitaltrends.com/home/pixie-points-help-you-find-lost-keys-pets-and-more/">Pixie</a>? It relies on the use of a phone.</li>
-                        <li><a href="http://www.wsj.com/articles/finding-the-best-lost-item-trackers-tile-trackr-and-duet-reviewed-1403046981">Duet or Tile or TrackR</a> or <a href="http://www.amazon.com/Smead-Stick-N-Find-Bluetooth-Location-02218/dp/B00CRJD7GQ">Stick-N-Find</a>? Again, phone.</li>
-                        <li><a href="http://www.amazon.com/Bounty-Hunter-Tracker-Metal-Detector/dp/B00005A3L1">A metal detector</a>? Well...</li>
+                        <li><a href="https://www.getpixie.com/">Pixie</a>
+                            <br>
+                            Tags you put on objects will talk to each other and can be located with your phone. Our's doesn't use the phone's camera to look for objects as the room it is in can be easily found.
+                            <ul class="bullet">
+                                <li>+ Uses network of tags to increase accuracy</li>
+                                <li>+ Detects items in a suitcase to help you pack</li>
+                                <li>- As tags die, network weakens</li>
+                                <li>- Relies on cell phone</li>
+                            </ul>
+                        </li>
+                        <li><a href="http://www.wsj.com/articles/finding-the-best-lost-item-trackers-tile-trackr-and-duet-reviewed-1403046981">Duet/Tile/TrackR</a> and <a href="http://www.amazon.com/Smead-Stick-N-Find-Bluetooth-Location-02218/dp/B00CRJD7GQ">Stick-N-Find</a>
+                            <br>
+                            Bluetooth tags you put on items so your phone can track them while in close proximity. Ours doesn't rely on you phone's Bluetooth being on, thus not draining battery and is made for a home environment so other people don't track your items.
+                            <ul class="bullet">
+                                <li>+ Other people with app also detect your things</li>
+                                <li>+ Tags beep to help you find items</li>
+                                <li>- Poor reviews on Amazon</li>
+                                <li>- Apps require Bluetooth to be enabled, draining phone battery</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -54,10 +72,18 @@
                 <h2>requirements</h2>
                 <div class="explanation">
                     <ul>
-                        <li><strong>Functional:</strong> aaa</li>
-                        <li><strong>Timing:</strong></li>
-                        <li><strong>Reliability:</strong></li>
-                        <li><strong></strong></li>
+                        <li><strong><span class="itemTitle">Functional:</span></strong>
+                            BLE beacons stuck on items transmit unique IDs to stations placed in rooms, which will update a web server with the item's location. Add-on finder will get information from web server and help locate the item once in the room where it is.
+                        </li>
+                        <li><strong><span class="itemTitle">Timing:</span></strong>
+                            Beacon locations will be updated in real-time and the add-on finder will be able to determine proximity to beacons in real-time as well.
+                        </li>
+                        <li><strong><span class="itemTitle">Reliability:</span></strong>
+                            If stations go offline will still continue to track items in other rooms. If beacons stop transmitting, the rest of the system will still function normally.
+                        </li>
+                        <li><strong><span class="itemTitle">Portability:</span></strong>
+                            Will be easy to set up and add-on finder will be portable within the house. Beacons may be placed freely.
+                        </li>
                         <li><strong></strong></li>
                     </ul>
                 </div>
@@ -66,30 +92,64 @@
 
         <section id="4" class="window">
             <div class="content">
-                <h2>technical specifications</h2>
+                <h2>Technical Specifications</h2>
                 <div class="explanation">
                     <div class="column-left">
                         <h3><strong>Hardware Components</strong></h3>
                         <ul>
-                            <li>uDoo</li>
-                            <li>Gimbal</li>
-                            <li>RFduino</li>
+                            <li><a href="http://www.adafruit.com/product/1876">Beaglebone Black - $55</a>
+                                <ul class="bullet">
+                                    <li type="circle">1GHz  Sitara AM3358BZCZ100 CPU</li>
+                                    <li type="circle">512MB RAM</li>
+                                    <li type="circle">SBC running Debian</li>
+                                    <li type="circle">Bluetooth+WiFi Cape</li>
+                                </ul>
+                            </li>
+                            <li><a href="https://store.gimbal.com/collections/beacons/products/s10">Gimbal Proximity Beacon Series 10 - $5</a>
+                                <ul class="bullet">
+                                    <li type="circle">1.6in x 1.1in x 0.2in</li>
+                                    <li type="circle">0.23oz</li>
+                                    <li type="circle">CR2032 replaceable battery up to 3 months</li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.sparkfun.com/products/13208">RFduino $25.95</a>
+                                <ul class="bullet">
+                                    <li type="circle">16MHz ARM Cortex-M0 CPU</li>
+                                    <li type="circle">8kb Ram</li>
+                                    <li type="circle">2.4 GHz Band Bluetooth LE RF</li>
+                                    <li type="circle">Transmit Power: 4dbm</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="column-center">
                         <h3><strong>Software Components</strong></h3>
                         <ul>
-                            <li>Django</li>
-                            <li></li>
-                            <li></li>
+                            <li>Debian Linux 3.8.13
+                                <ul class="bullet">
+                                    <li>Programming the stations using Debian distro</li>
+                                </ul>
+                            </li>
+                            <li>Django
+                                <ul class="bullet">
+                                    <li>To serve the website</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="column-right">
                         <h3><strong>Protocols</strong></h3>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>Bluetooth LE
+                                <ul class="bullet">
+                                    <li>Tracking and finding items with beacons uses Bluetooth</li>
+                                </ul>
+                            </li>
+                            <li>IEEE 802.11
+                                <ul class="bullet">
+                                    <li>Stations communicate with primary station and web server via 802.11</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
