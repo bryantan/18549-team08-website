@@ -116,7 +116,7 @@ pre {
   position: absolute;
   top: 50%;
   width: 100%;
-  margin-top: -230px;
+  margin-top: -400px;
 }
 .window:nth-child(2) .content h2 {
   text-align: center;
@@ -141,7 +141,7 @@ pre {
   position: absolute;
   top: 50%;
   width: 100%;
-  margin-top: -230px;
+  margin-top: -350px;
 }
 .window:nth-child(3) .content h2 {
   text-align: center;
@@ -163,7 +163,7 @@ pre {
   position: absolute;
   top: 50%;
   width: 100%;
-  margin-top: -230px;
+  margin-top: -300px;
 }
 .window:nth-child(4) .content h2 {
   text-align: center;
@@ -188,7 +188,7 @@ pre {
   position: absolute;
   top: 50%;
   width: 100%;
-  margin-top: -230px;
+  margin-top: -400px;
 }
 .window:nth-child(5) .content h2 {
   text-align: center;
