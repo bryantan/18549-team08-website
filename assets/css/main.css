@@ -36,7 +36,7 @@ h2 {
 p {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #333a3e;
-  font-size: 1.4em;
+  /*font-size: 1.4em;*/
 }
 
 a {
@@ -46,12 +46,18 @@ a {
 }
 
 ul {
+    font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
     list-style:none;
-    padding-left:0;
     text-align: left;
 }
 
+ul.bullet {
+  font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
 li {
+    font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
     margin-bottom: 1%;
 }
 
@@ -68,6 +74,14 @@ li {
     width: 33%;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 pre {
   color: #d5d7dd;
   color: #bcbdc0;
@@ -77,9 +91,8 @@ pre {
 
 .window:nth-child(1) .content {
   position: absolute;
-  top: 50%;
+  top: 25%;
   width: 100%;
-  margin-top: -170px;
 }
 .window:nth-child(1) .content i {
   font-size: 4.0em;
@@ -114,9 +127,7 @@ pre {
 }
 .window:nth-child(2) .content {
   position: absolute;
-  top: 50%;
   width: 100%;
-  margin-top: -400px;
 }
 .window:nth-child(2) .content h2 {
   text-align: center;
@@ -139,9 +150,7 @@ pre {
 }
 .window:nth-child(3) .content {
   position: absolute;
-  top: 50%;
   width: 100%;
-  margin-top: -350px;
 }
 .window:nth-child(3) .content h2 {
   text-align: center;
@@ -151,9 +160,9 @@ pre {
 .window:nth-child(3) .content .explanation {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #030c11;
-  font-size: 1.4em;
+  font-size: 1.3em;
   text-align: center;
-  padding: 0 25%;
+  padding: 0 15%;
 }
 
 .window:nth-child(4) ul {
@@ -161,9 +170,7 @@ pre {
 }
 .window:nth-child(4) .content {
   position: absolute;
-  top: 50%;
   width: 100%;
-  margin-top: -300px;
 }
 .window:nth-child(4) .content h2 {
   text-align: center;
@@ -173,9 +180,9 @@ pre {
 .window:nth-child(4) .content .explanation {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #000508;
-  font-size: 1.4em;
+  font-size: 1.3em;
   text-align: center;
-  padding: 0 25%;
+  padding: 0 15%;
 }
 .window:nth-child(4) .content .explanation li {
 }
@@ -186,9 +193,7 @@ pre {
 }
 .window:nth-child(5) .content {
   position: absolute;
-  top: 50%;
   width: 100%;
-  margin-top: -400px;
 }
 .window:nth-child(5) .content h2 {
   text-align: center;
@@ -197,28 +202,39 @@ pre {
 }
 .window:nth-child(5) .content h3 {
   text-align: center;
-  font-size: 3.0em;
+  font-size: 2.7em;
 }
 .window:nth-child(5) .content .explanation h3 {
+  font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   text-align: center;
   font-size: 1.4em;
+  color: #ffffff;
 }
+.window:nth-child(5) .content .explanation .column-right h3 {
+  margin-right: 35%;
+}
+
 .window:nth-child(5) .content .explanation {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #000101;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-align: center;
-  padding: 0 10%;
+  padding: 0 5%;
 }
+
+.window:nth-child(5) .content .explanation ul.bullet {
+  margin-left: -15%;
+}
+
 .window:nth-child(5) .content .explanation li {
+  font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   font-size: 0.9em;
 }
 
+
 .window:nth-child(6) .content {
   position: absolute;
-  top: 50%;
   width: 100%;
-  margin-top: -400px;
 }
 .window:nth-child(6) .content i {
   font-size: 4.0em;
@@ -234,6 +250,11 @@ pre {
 .window:nth-child(6) .content .explanation {
   padding: 0 17%;
 }
+
+.window:nth-child(6) .content .explanation .explanationIMG {
+  width: 100%;
+}
+
 .window:nth-child(6) .content h2 {
   text-align: center;
   font-size: 3.0em;
@@ -255,9 +276,7 @@ pre {
 }
 .window:nth-child(7) .content {
   position: absolute;
-  top: 50%;
   width: 100%;
-  margin-top: -400px;
 }
 .window:nth-child(7) .content h2 {
   text-align: center;
@@ -269,9 +288,10 @@ pre {
   color: #09161e;
   font-size: 1.4em;
   text-align: center;
-  padding: 0 15%;
+  padding: 0 10%;
 }
 .window:nth-child(7) .content .explanation li {
+  font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #d5d7dd;
 }
 
@@ -281,9 +301,7 @@ pre {
 }
 .window:nth-child(8) .content {
   position: absolute;
-  top: 50%;
   width: 100%;
-  margin-top: -350px;
 }
 .window:nth-child(8) .content h2 {
   text-align: center;
@@ -508,11 +526,6 @@ img.center {
   margin-right: auto;
 }
 
-ul.bullet {
-  margin-left: 20px;
-  font-size: 14pt;
-}
-
 body li {
   color: #A6B4C4;
 }
@@ -521,4 +534,8 @@ body li {
   color: #ffffff;
   text-decoration: none;
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
+}
+
+.explanationIMG {
+  width: 70%;
 }
