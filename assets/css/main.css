@@ -76,10 +76,12 @@ li {
 
 .left {
   float: left;
+  width: 50%;
 }
 
 .right {
   float: right;
+  width: 50%;
 }
 
 pre {
@@ -283,12 +285,23 @@ pre {
   font-size: 3.0em;
   color: #a1dbfe;
 }
+.window:nth-child(7) .content .explanation h3 {
+  font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  color: #ffffff;
+}
 .window:nth-child(7) .content .explanation {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #09161e;
-  font-size: 1.4em;
+  font-size: 1.1em;
   text-align: center;
   padding: 0 10%;
+}
+.window:nth-child(7) .content .explanation .right {
+  text-align: center;
+}
+.window:nth-child(7) .content .explanation .right ul h3 {
+  text-align: left;
 }
 .window:nth-child(7) .content .explanation li {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
@@ -307,6 +320,11 @@ pre {
   text-align: center;
   font-size: 3.0em;
   color: #75cbfe;
+}
+.window:nth-child(8) .content .explanation h3 {
+  text-align: center;
+  font-size: 1.4em;
+  color: #ffffff;
 }
 .window:nth-child(8) .content .explanation {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
@@ -537,5 +555,5 @@ body li {
 }
 
 .explanationIMG {
-  width: 70%;
+  width: 100%;
 }

@@ -177,14 +177,27 @@
                 <h2>Use Cases</h2>
                 <div class="explanation">
                   <div class="left">
+                    <h3>Normal Use</h3>
                     <ul>
-                      <li>Normal Use</li>
+                        <h3>Location</h3>
+                        <li>+ First, set up stations and webserver on home WiFi</li>
+                        <li>+ Place beacons on items to keep track of</li>
+                        <li>+ Beacons fire intermittently and stations communicate their locations to webserver</li>
+                        <h3>Searching</h3>
+                        <li>+ Click search button for an item on webserver</li>
+                        <li>+ Webserver sends a request to the all stations</li>
+                        <li>+ Stations broadcast beacon id to add on and commands it to search for the item</li>
+                        <li>+ Add on will display distance to item through LEDs</li>
                     </ul>
                   </div>
 
                   <div class="right">
+                    <h3>Other Use</h3>
                     <ul>
-                      <li>Abrnomal Use</li>
+                        <h3>Tracking</h3>
+                        <li>+ User can wear a wristband that communicates location to the stations back to the webserver</li>
+                        <li>+ Webserver keeps track of last known locations as well as current location</li>
+                        <li>+ Webserver processes locations and can determine which users took which items</li>
                     </ul>
                   </div>
                 </div>
@@ -195,7 +208,14 @@
             <div class="content">
                 <h2>Interaction Diagrams</h2>
                 <div class="explanation">
-
+                    <div class="left">
+                        <h3>Tracking</h3>
+                        <img class="center explanationIMG" src="assets/img/track.png" />
+                    </div>
+                    <div class="right">
+                        <h3>Searching</h3>
+                        <img class="center explanationIMG" src="assets/img/search.png" />
+                    </div>
                 </div>
             </div>
         </section>
