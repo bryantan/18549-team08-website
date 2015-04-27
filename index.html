@@ -100,27 +100,31 @@
                     <div class="column-left">
                         <h3><strong>Hardware Components</strong></h3>
                         <ul>
-                            <li><a href="http://www.adafruit.com/product/1876">Beaglebone Black - $55</a>
+                            <li><a href="http://www.adafruit.com/product/1876">Beaglebone Black - $55
+                                <div><img class="center explanationIMG" src="assets/img/bbb.jpg"/></div></a>
                                 <ul class="bullet">
                                     <li type="circle">1GHz  Sitara AM3358BZCZ100 CPU</li>
                                     <li type="circle">512MB RAM</li>
                                     <li type="circle">SBC running Debian</li>
                                     <li type="circle">Bluetooth+WiFi Cape</li>
+                                    <li><a><span class="help">Note: Add-on only uses bluetooth and has a custom pcb</span>
+                                          <div><img class="center explanationIMG" src="assets/img/pcb.jpg"/></div></a></li>
                                 </ul>
                             </li>
-                            <li><a href="https://store.gimbal.com/collections/beacons/products/s10">Gimbal Proximity Beacon Series 10 - $5</a>
+                            <li><a href="https://store.gimbal.com/collections/beacons/products/s10">Gimbal Proximity Beacon Series 10 - $5<div><img class="center explanationIMG" src="assets/img/gimbal.png"/></div></a>
                                 <ul class="bullet">
                                     <li type="circle">1.6in x 1.1in x 0.2in</li>
                                     <li type="circle">0.23oz</li>
-                                    <li type="circle">CR2032 replaceable battery up to 3 months</li>
+                                    <li type="circle">CR2032 Replaceable Battery</li>
                                 </ul>
                             </li>
-                            <li><a href="https://www.sparkfun.com/products/13208">RFduino $25.95</a>
+                            <li><a href="http://shop.udoo.org/usa/product/udoo-quad.html">UDOO Quad $0
+                              <div><img class="center explanationIMG" src="assets/img/udoo.jpg"/></div></a>
                                 <ul class="bullet">
-                                    <li type="circle">16MHz ARM Cortex-M0 CPU</li>
-                                    <li type="circle">8kb Ram</li>
-                                    <li type="circle">2.4 GHz Band Bluetooth LE RF</li>
-                                    <li type="circle">Transmit Power: 4dbm</li>
+                                    <li type="circle">1GHz Freescale i.MX 6 ARM Cortex-A9 CPU</li>
+                                    <li type="circle">1GB DDR3 RAM</li>
+                                    <li type="circle">Built-in WIFI Module</li>
+                                    <li type="circle">Additional BLE Adapter Added</li>
                                 </ul>
                             </li>
                         </ul>
@@ -133,9 +137,9 @@
                                     <li type="circle">Programming the stations using Debian distro</li>
                                 </ul>
                             </li>
-                            <li>Django
+                            <li><a href="https://www.meteor.com">Meteor</a>
                                 <ul class="bullet">
-                                    <li type="circle">To serve the website</li>
+                                    <li type="circle">To serve the webserver</li>
                                 </ul>
                             </li>
                         </ul>
@@ -177,27 +181,33 @@
                 <h2>Use Cases</h2>
                 <div class="explanation">
                   <div class="left">
-                    <h3>Normal Use</h3>
+                    <h3>Passive</h3>
                     <ul>
-                        <h3>Location</h3>
+                        <h3>Location Tracking</h3>
                         <li>+ First, set up stations and webserver on home WiFi</li>
                         <li>+ Place beacons on items to keep track of</li>
                         <li>+ Beacons fire intermittently and stations communicate their locations to webserver</li>
-                        <h3>Searching</h3>
+                        <li>+ Webserver keeps track of current location of all beacons</li>
+                        <!-- <h3>Searching</h3>
                         <li>+ Click search button for an item on webserver</li>
                         <li>+ Webserver sends a request to the all stations</li>
                         <li>+ Stations broadcast beacon id to add on and commands it to search for the item</li>
-                        <li>+ Add on will display distance to item through LEDs</li>
+                        <li>+ Add on will display distance to item through LEDs</li> -->
                     </ul>
                   </div>
 
                   <div class="right">
-                    <h3>Other Use</h3>
+                    <h3>Active</h3>
                     <ul>
-                        <h3>Tracking</h3>
-                        <li>+ User can wear a wristband that communicates location to the stations back to the webserver</li>
-                        <li>+ Webserver keeps track of last known locations as well as current location</li>
-                        <li>+ Webserver processes locations and can determine which users took which items</li>
+                      <h3>Searching</h3>
+                      <li>+ Click search button for an item on webserver</li>
+                      <li>+ Webserver sends a request to the all stations</li>
+                      <li>+ Stations broadcast beacon id to add on and commands it to search for the item</li>
+                      <li>+ Add on will display distance to item through LEDs</li>
+                      <!-- <h3>Tracking</h3>
+                      <li>+ User can wear a wristband that communicates location to the stations back to the webserver</li>
+                      <li>+ Webserver keeps track of current location of all</li>
+                      <li>+ Webserver processes locations and can determine which users took which items</li> -->
                     </ul>
                   </div>
                 </div>

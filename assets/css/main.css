@@ -228,11 +228,23 @@ pre {
   margin-left: -15%;
 }
 
+
 .window:nth-child(5) .content .explanation li {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   font-size: 0.9em;
 }
 
+.window:nth-child(5) .content .explanation li .help {
+  font-size: 0.7em;
+}
+
+.window:nth-child(5) .content .explanation a>div {
+  display:none;
+}
+
+.window:nth-child(5) .content .explanation a:hover>div {
+  display:block;
+}
 
 .window:nth-child(6) .content {
   position: absolute;
@@ -293,9 +305,9 @@ pre {
 .window:nth-child(7) .content .explanation {
   font-family: BrandonText-Regular, Futura, Helvetica, Arial, sans-serif;
   color: #09161e;
-  font-size: 1.1em;
+  font-size: 1.0em;
   text-align: center;
-  padding: 0 10%;
+  padding: 0 5%;
 }
 .window:nth-child(7) .content .explanation .right {
   text-align: center;
@@ -331,7 +343,7 @@ pre {
   color: #030c11;
   font-size: 1.4em;
   text-align: center;
-  padding: 0 25%;
+  padding: 0 10%;
 }
 /*
 .window:nth-child(2) .content {
