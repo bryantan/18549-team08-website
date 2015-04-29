@@ -100,25 +100,25 @@
                     <div class="column-left">
                         <h3><strong>Hardware Components</strong></h3>
                         <ul>
-                            <li><a href="http://www.adafruit.com/product/1876">Beaglebone Black - $55
+                            <li><a href="http://www.adafruit.com/product/1876"><u>Beaglebone Black - $55</u>
                                 <div><img class="center explanationIMG" src="assets/img/bbb.jpg"/></div></a>
                                 <ul class="bullet">
                                     <li type="circle">1GHz  Sitara AM3358BZCZ100 CPU</li>
                                     <li type="circle">512MB RAM</li>
                                     <li type="circle">SBC running Debian</li>
                                     <li type="circle">Bluetooth+WiFi Cape</li>
-                                    <li><a><span class="help">Note: Add-on only uses bluetooth and has a custom pcb</span>
+                                    <li><a><span class="help"><u>Note: Add-on only uses bluetooth and has a custom pcb</u></span>
                                           <div><img class="center explanationIMG" src="assets/img/pcb.jpg"/></div></a></li>
                                 </ul>
                             </li>
-                            <li><a href="https://store.gimbal.com/collections/beacons/products/s10">Gimbal Proximity Beacon Series 10 - $5<div><img class="center explanationIMG" src="assets/img/gimbal.png"/></div></a>
+                            <li><a href="https://store.gimbal.com/collections/beacons/products/s10"><u>Gimbal Proximity Beacon Series 10 - $5</u><div><img class="center explanationIMG" src="assets/img/gimbal.png"/></div></a>
                                 <ul class="bullet">
                                     <li type="circle">1.6in x 1.1in x 0.2in</li>
                                     <li type="circle">0.23oz</li>
                                     <li type="circle">CR2032 Replaceable Battery</li>
                                 </ul>
                             </li>
-                            <li><a href="http://shop.udoo.org/usa/product/udoo-quad.html">UDOO Quad $0
+                            <li><a href="http://shop.udoo.org/usa/product/udoo-quad.html"><u>UDOO Quad - $0</u>
                               <div><img class="center explanationIMG" src="assets/img/udoo.jpg"/></div></a>
                                 <ul class="bullet">
                                     <li type="circle">1GHz Freescale i.MX 6 ARM Cortex-A9 CPU</li>
@@ -137,9 +137,9 @@
                                     <li type="circle">Programming the stations using Debian distro</li>
                                 </ul>
                             </li>
-                            <li><a href="https://www.meteor.com">Meteor</a>
+                            <li><a href="https://www.meteor.com"><u>Meteor</u></a>
                                 <ul class="bullet">
-                                    <li type="circle">To serve the webserver</li>
+                                    <li type="circle">Javascript framework used for the webserver</li>
                                 </ul>
                             </li>
                         </ul>
@@ -188,6 +188,7 @@
                         <li>+ Place beacons on items to keep track of</li>
                         <li>+ Beacons fire intermittently and stations communicate their locations to webserver</li>
                         <li>+ Webserver keeps track of current location of all beacons</li>
+                        <li>+ Can set a default room for items and webserver notify if item is no longer there</li>
                         <!-- <h3>Searching</h3>
                         <li>+ Click search button for an item on webserver</li>
                         <li>+ Webserver sends a request to the all stations</li>
@@ -309,8 +310,8 @@
 
                 $windows.windows({
                     snapping: true,
-                    snapSpeed: 300,
-                    snapInterval: 500,
+                    snapSpeed: 100,
+                    snapInterval: 300,
                     onScroll: function(s){},
                     onSnapComplete: function($el){},
                     onWindowEnter: function($el){}
