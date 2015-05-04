@@ -1,337 +1,281 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Placeholder</title>
 
-        <script src="assets/js/jquery-1.11.1.min.js"></script>
-        <script src="assets/js/jquery.windows.js"></script>
-        <link rel="stylesheet" href="assets/css/main.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-    </head>
-    <body>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Placeholder: Track your items easily</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-        <!-- NOTE: each "window" is a section element with class .window -->
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <section id="0" class="window" name="title">
-            <div class="content">
-                <h1>Placeholder</h1>
-                <div class="explanation">
-                    <h2>Never find yourself digging through your cabinets to find your passport, or going through all your coats to locate your car keys with Placeholder.</br>With Bluetooth LE beacons, stations that keep track of the beacons, and an item-finding add-on, Placeholder helps you keep track of where you place your stuff.</h2>
-                </div>
-            </div>
-            <div class="links">
-                <a href="#1">Motivation</a> -
-                <a href="#2">Competitive Analysis</a> -
-                <a href="#3">Requirements</a> -
-                <a href="#4">Technical Specifications</a> -
-                <a href="#5">Architecture</a> -
-                <a href="#6">Use Cases</a> -
-                <a href="#7">Interaction Diagrams</a>
-            </div>
-        </section>
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 
-        <section id="1" class="window">
-            <div class="content">
-                <h2>Looking for something?</h2>
-                <div class="explanation">
-                    <p>Never want to lose anything again? With our home system, you'll never lose track of where your keys or other important items are in the house!</p>
-                </div>
-                <img class="center explanationIMG" src="http://i.imgur.com/IPIU8yj.jpg" />
-            </div>
-        </section>
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="stylesheets/lib/normalize.css">
+  <link rel="stylesheet" href="stylesheets/lib/skeleton.css">
+  <link rel="stylesheet" href="stylesheets/custom.css">
 
-        <section id="2" class="window">
-            <div class="content">
-                <h2>Competitive Analysis</h2>
-                <div class="explanation">
-                    <ul>
-                        <li><a href="https://www.getpixie.com/">Pixie</a>
-                            <br>
-                            Tags you put on objects will talk to each other and can be located with your phone. Our's doesn't use the phone's camera to look for objects as the room it is in can be easily found.
-                            <ul class="bullet">
-                                <li>+ Uses network of tags to increase accuracy</li>
-                                <li>+ Detects items in a suitcase to help you pack</li>
-                                <li>- As tags die, network weakens</li>
-                                <li>- Relies on cell phone</li>
-                            </ul>
-                        </li>
-                        <li><a href="http://www.wsj.com/articles/finding-the-best-lost-item-trackers-tile-trackr-and-duet-reviewed-1403046981">Duet/Tile/TrackR</a> and <a href="http://www.amazon.com/Smead-Stick-N-Find-Bluetooth-Location-02218/dp/B00CRJD7GQ">Stick-N-Find</a>
-                            <br>
-                            Bluetooth tags you put on items so your phone can track them while in close proximity. Ours doesn't rely on you phone's Bluetooth being on, thus not draining battery and is made for a home environment so other people don't track your items.
-                            <ul class="bullet">
-                                <li>+ Other people with app also detect your things</li>
-                                <li>+ Tags beep to help you find items</li>
-                                <li>- Poor reviews on Amazon</li>
-                                <li>- Apps require Bluetooth to be enabled, draining phone battery</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+</head>
+<body class="code-snippets-visible">
 
-        <section id="3" class="window">
-            <div class="content">
-                <h2>Requirements</h2>
-                <div class="explanation">
-                    <ul>
-                        <li><strong><span class="itemTitle">Functional:</span></strong>
-                            BLE beacons stuck on items transmit unique IDs to stations placed in rooms, which will update a web server with the item's location. Add-on finder will get information from web server and help locate the item once in the room where it is.
-                        </li>
-                        <li><strong><span class="itemTitle">Timing:</span></strong>
-                            Beacon locations will be updated in real-time and the add-on finder will be able to determine proximity to beacons in real-time as well.
-                        </li>
-                        <li><strong><span class="itemTitle">Reliability:</span></strong>
-                            If stations go offline will still continue to track items in other rooms. If beacons stop transmitting, the rest of the system will still function normally.
-                        </li>
-                        <li><strong><span class="itemTitle">Portability:</span></strong>
-                            Will be easy to set up and add-on finder will be portable within the house. Beacons may be placed freely.
-                        </li>
-                        <li><strong></strong></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
 
-        <section id="4" class="window">
-            <div class="content">
-                <h2>Technical Specifications</h2>
-                <div class="explanation">
-                    <div class="column-left">
-                        <h3><strong>Hardware Components</strong></h3>
-                        <ul>
-                            <li><a href="http://www.adafruit.com/product/1876"><u>Beaglebone Black - $55</u>
-                                <div><img class="center explanationIMG" src="assets/img/bbb.jpg"/></div></a>
-                                <ul class="bullet">
-                                    <li type="circle">1GHz  Sitara AM3358BZCZ100 CPU</li>
-                                    <li type="circle">512MB RAM</li>
-                                    <li type="circle">SBC running Debian</li>
-                                    <li type="circle">Bluetooth+WiFi Cape</li>
-                                    <li><a><span class="help"><u>Note: Add-on only uses bluetooth and has a custom pcb</u></span>
-                                          <div><img class="center explanationIMG" src="assets/img/pcb.jpg"/></div></a></li>
-                                </ul>
-                            </li>
-                            <li><a href="https://store.gimbal.com/collections/beacons/products/s10"><u>Gimbal Proximity Beacon Series 10 - $5</u><div><img class="center explanationIMG" src="assets/img/gimbal.png"/></div></a>
-                                <ul class="bullet">
-                                    <li type="circle">1.6in x 1.1in x 0.2in</li>
-                                    <li type="circle">0.23oz</li>
-                                    <li type="circle">CR2032 Replaceable Battery</li>
-                                </ul>
-                            </li>
-                            <li><a href="http://shop.udoo.org/usa/product/udoo-quad.html"><u>UDOO Quad - $0</u>
-                              <div><img class="center explanationIMG" src="assets/img/udoo.jpg"/></div></a>
-                                <ul class="bullet">
-                                    <li type="circle">1GHz Freescale i.MX 6 ARM Cortex-A9 CPU</li>
-                                    <li type="circle">1GB DDR3 RAM</li>
-                                    <li type="circle">Built-in WIFI Module</li>
-                                    <li type="circle">Additional BLE Adapter Added</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="column-center">
-                        <h3><strong>Software Components</strong></h3>
-                        <ul>
-                            <li>Debian Linux 3.8.13
-                                <ul class="bullet">
-                                    <li type="circle">Programming the stations using Debian distro</li>
-                                </ul>
-                            </li>
-                            <li><a href="https://www.meteor.com"><u>Meteor</u></a>
-                                <ul class="bullet">
-                                    <li type="circle">Javascript framework used for the webserver</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="column-right">
-                        <h3><strong>Protocols</strong></h3>
-                        <ul>
-                            <li>Bluetooth LE
-                                <ul class="bullet">
-                                    <li type="circle">Tracking and finding items with beacons uses Bluetooth</li>
-                                </ul>
-                            </li>
-                            <li>IEEE 802.11
-                                <ul class="bullet">
-                                    <li type="circle">Stations communicate with primary station and web server via 802.11</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Navbar -->
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="#motivation">Motivation</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#analysis">Competitive Analysis</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#reqs">Requirements</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#specs">Technical Specifications</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#architecture">Architecture</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#use-cases">Use Cases</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#diagrams">Interaction Diagrams</a></li>
+        </ul>
+      </div>
+    </nav>
 
+    <!-- Header -->
+    <section class="header">
+      <h1 class="title">Placeholder</h1>
+      <h5 class="">A system to track the locations of your items easily</h5>
+      <div class="value-props row">
+        <div class="six columns value-prop">
+          Never find yourself digging through your cabinets to find your passport, or going through all your coats to locate your car keys with Placeholder.
+        </div>
+        <div class="six columns value-prop">
+          With Bluetooth LE beacons, stations that keep track of the beacons, and an item-finding add-on, Placeholder helps you keep track of where you place your stuff.
+        </div>
+      </div>
+    </section>
 
+    <!-- Motivation -->
+    <div class="docs-section" id="motivation">
+      <h6 class="docs-header">Motivation</h6>
+      <p>Never want to lose anything again? With our home system, you'll never lose track of where your keys or other important items are in the house!</p>
+      <img src="http://i.imgur.com/IPIU8yj.jpg" />
+    </div>
 
+    <!-- Competitive Analysis -->
+    <div class="docs-section" id="analysis">
+      <h6 class="docs-header">Competitive Analysis</h6>
+      <div class="row">
+        <div class="six columns">
+          <h5><a href="https://www.getpixie.com/">Pixie</a></h5>
+          <p>Tags you put on objects will talk to each other and can be located with your phone. Our's doesn't use the phone's camera to look for objects as the room it is in can be easily found.</p>
+          <div class="center-ul-two">
+            <h6>Cool:</h6>
+            <ul>
+              <li>Uses network of tags to increase accuracy</li>
+              <li>Detects items in a suitcase to help you pack</li>
+            </ul>
+            <h6>Not Cool:</h6>
+            <ul>
+              <li>As tags die, network weakens</li>
+              <li>Relies on cell phone</li>
+            </ul>
+          </div>
+        </div>
+        <div class="six columns">
+          <h5><a href="http://www.wsj.com/articles/finding-the-best-lost-item-trackers-tile-trackr-and-duet-reviewed-1403046981">Duet/Tile/TrackR</a> and <a href="http://www.amazon.com/Smead-Stick-N-Find-Bluetooth-Location-02218/dp/B00CRJD7GQ">Stick-N-Find</a></h5>
+          <p>Bluetooth tags you put on items so your phone can track them while in close proximity. Ours doesn't rely on you phone's Bluetooth being on, thus not draining battery and is made for a home environment so other people don't track your items.</p>
+          <div class="center-ul-two">
+            <h6>Cool:</h6>
+            <ul>
+              <li>Other people with app also detect your things</li>
+              <li>Tags beep to help you find items</li>
+            </ul>
+            <h6>Not Cool:</h6>
+            <ul>
+              <li>Poor reviews on Amazon</li>
+              <li>Apps require Bluetooth to be enabled, draining phone battery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Requirements -->
+    <div class="docs-section" id="reqs">
+      <h6 class="docs-header">Requirements</h6>
+      <div class="row">
+        <div class="six columns">
+          <ul>
+            <li><strong><span>Functional:</span></strong>
+              BLE beacons stuck on items transmit unique IDs to stations placed in rooms, which will update a web server with the item's location. Add-on finder will get information from web server and help locate the item once in the room where it is.
+            </li>
+            <li><strong><span>Timing:</span></strong>
+              Beacon locations will be updated in real-time and the add-on finder will be able to determine proximity to beacons in real-time as well.
+            </li>
+          </ul>
+        </div>
+        <div class="six columns">
+          <ul>
+            <li><strong><span>Reliability:</span></strong>
+              If stations go offline will still continue to track items in other rooms. If beacons stop transmitting, the rest of the system will still function normally.
+            </li>
+            <li><strong><span>Portability:</span></strong>
+              Will be easy to set up and add-on finder will be portable within the house. Beacons may be placed freely.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-        <section id="5" class="window">
-            <div class="content">
-                <h2>Architecture</h2>
-                <div class="explanation">
-                  <img class="center explanationIMG" src="assets/img/architecture.png" />
-                </div>
-            </div>
-        </section>
+    <!-- Technical Specifications -->
+    <div class="docs-section" id="specs">
+      <h6 class="docs-header">Technical Specifications</h6>
+      <h5>Hardware Components</h5>
+      <div class="row">
+        <div class="four columns">
+          <a href="http://www.adafruit.com/product/1876">
+            <u>Beaglebone Black (Cost: $55)</u>
+          </a>
+          <div>
+            <img class="image" src="images/bbb.jpg"/>
+          </div>
+          <div class="center-ul-three">
+            <ul>
+              <li>1GHz  Sitara AM3358BZCZ100 CPU</li>
+              <li>512MB RAM</li>
+              <li>SBC running Debian</li>
+              <li>Bluetooth+WiFi Cape</li>
+              <li>
+                Note: Add-on only uses bluetooth and has a custom pcb
+                <!-- <img src="images/pcb.jpg"/> -->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="four columns">
+          <a href="https://store.gimbal.com/collections/beacons/products/s10">
+            <u>Gimbal Proximity Beacon Series 10 (Cost: $5)</u>
+          </a>
+          <div>
+            <img class="image" src="images/gimbal.png"/>
+          </div>
+          <div class="center-ul-three">
+            <ul>
+              <li>1.6in x 1.1in x 0.2in</li>
+              <li>0.23oz</li>
+              <li>CR2032 Replaceable Battery</li>
+            </ul>
+          </div>
+        </div>
+        <div class="four columns">
+          <a href="http://shop.udoo.org/usa/product/udoo-quad.html">
+            <u>UDOO Quad (Cost: $0)</u>
+          </a>
+          <div>
+            <img class="image" src="images/udoo.jpg"/>
+          </div>
+          <div class="center-ul-three">
+            <ul>
+              <li>1GHz Freescale i.MX 6 ARM Cortex-A9 CPU</li>
+              <li>1GB DDR3 RAM</li>
+              <li>Built-in WIFI Module</li>
+              <li>Additional BLE Adapter Added</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-        <section id="6" class="window">
-            <div class="content">
-                <h2>Use Cases</h2>
-                <div class="explanation">
-                  <div class="left">
-                    <h3>Passive</h3>
-                    <ul>
-                        <h3>Location Tracking</h3>
-                        <li>+ First, set up stations and webserver on home WiFi</li>
-                        <li>+ Place beacons on items to keep track of</li>
-                        <li>+ Beacons fire intermittently and stations communicate their locations to webserver</li>
-                        <li>+ Webserver keeps track of current location of all beacons</li>
-                        <li>+ Can set a default room for items and webserver notify if item is no longer there</li>
-                        <!-- <h3>Searching</h3>
-                        <li>+ Click search button for an item on webserver</li>
-                        <li>+ Webserver sends a request to the all stations</li>
-                        <li>+ Stations broadcast beacon id to add on and commands it to search for the item</li>
-                        <li>+ Add on will display distance to item through LEDs</li> -->
-                    </ul>
-                  </div>
+      <h5>Software Components</h5>
+      <div class="row">
+        <div class="six columns">
+          <h6>Debian Linux 3.8.13</h6>
+          <p>Programming the stations using Debian distro</p>
+        </div>
+        <div class="six columns">
+          <h6><a href="https://www.meteor.com"><u>Meteor</u></a></h6>
+          <p>Javascript framework for building central web server</p>
+        </div>
+      </div>
 
-                  <div class="right">
-                    <h3>Active</h3>
-                    <ul>
-                      <h3>Searching</h3>
-                      <li>+ Click search button for an item on webserver</li>
-                      <li>+ Webserver sends a request to the all stations</li>
-                      <li>+ Stations broadcast beacon id to add on and commands it to search for the item</li>
-                      <li>+ Add on will display distance to item through LEDs</li>
-                      <!-- <h3>Tracking</h3>
-                      <li>+ User can wear a wristband that communicates location to the stations back to the webserver</li>
-                      <li>+ Webserver keeps track of current location of all</li>
-                      <li>+ Webserver processes locations and can determine which users took which items</li> -->
-                    </ul>
-                  </div>
-                </div>
-            </div>
-        </section>
+      <h5>Protocols</h5>
+      <div class="row">
+        <div class="six columns">
+          <h6>Bluetooth Low Energy (BLE)</h6>
+          <p>Tracking and finding items with beacons uses Bluetooth</p>
+        </div>
+        <div class="six columns">
+          <h6>IEEE 802.11</h6>
+          <p>Stations communicate with primary station and web server via 802.11</p>
+        </div>
+      </div>
 
-        <section id="7" class="window">
-            <div class="content">
-                <h2>Interaction Diagrams</h2>
-                <div class="explanation">
-                    <div class="left">
-                        <h3>Tracking</h3>
-                        <img class="center explanationIMG" src="assets/img/track.png" />
-                    </div>
-                    <div class="right">
-                        <h3>Searching</h3>
-                        <img class="center explanationIMG" src="assets/img/search.png" />
-                    </div>
-                </div>
-            </div>
-        </section>
+    </div>
 
-        <!--
-        <section id="1" class="window">
-            <div class="content">
-                <h2>
-                project root<br/>
-                | -- css<br/>
-                | -- | -- main.css (compiled)<br/>
-                | -- js<br/>
-                | -- | -- <span class="highlight">jquery.windows.js</span><br/>
-                | -- scss<br/>
-                | -- | -- <span class="highlight">main.scss</span><br/>
-                | -- <span class="highlight">index.html</span>
-                </h2>
-            </div>
-        </section>
+    <!-- Architecture -->
+    <div class="docs-section" id="architecture">
+      <h6 class="docs-header">Architecture</h6>
+      <img src="images/architecture.png"/>
+    </div>
 
-        <section id="3" class="window">
-            <pre>
-                $('.window').windows({
-                    snapping: true,
-                    snapSpeed: 500,
-                    snapInterval: 1100,
-                    onScroll: function(scrollPos){
-                        // scrollPos:Number
-                    },
-                    onSnapComplete: function($el){
-                        // after window ($el) snaps into place
-                    },
-                    onWindowEnter: function($el){
-                        // when new window ($el) enters viewport
-                    }
-                });
-            </pre>
-        </section>
+    <!-- Use Cases -->
+    <div class="docs-section" id="use-cases">
+      <h6 class="docs-header">Use Cases</h6>
+      <div class="row docs-example">
+        <div class="six columns">
+          <h5>Passive: Location Tracking</h5>
+          <div class="center-ul-two-wide">
+            <ul>
+              <li>+ First, set up stations and webserver on home WiFi</li>
+              <li>+ Place beacons on items to keep track of</li>
+              <li>+ Beacons fire intermittently and stations communicate their locations to webserver</li>
+              <li>+ Webserver keeps track of current location of all beacons</li>
+              <li>+ Can set a default room for items and webserver notify if item is no longer there</li>
+            </ul>
+          </div>
+        </div>
+        <div class="six columns">
+          <h5>Active: Searching</h5>
+          <div class="center-ul-two-wide">
+            <ul>
+              <li>+ Click search button for an item on webserver</li>
+              <li>+ Webserver sends a request to the all stations</li>
+              <li>+ Stations broadcast beacon id to add on and commands it to search for the item</li>
+              <li>+ Add on will display distance to item through LEDs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <section id="4" class="window">
-            <div class="content">
-                <h1>api</h1>
-                <pre>
-                    // returns ratio 0-1
-                    $('.window:eq(0)').ratioVisible();
+    <!-- Interaction Diagrams -->
+    <div class="docs-section" id="diagrams">
+      <h6 class="docs-header">Interaction Diagrams</h6>
+      <div class="row docs-example">
+        <div class="six columns">
+          <h5>Passive: Location Tracking</h5>
+          <img class="diagram" src="images/track.png" />
+        </div>
+        <div class="six columns">
+          <h5>Active: Searching</h5>
+          <img class="diagram" src="images/search.png" />
+        </div>
+      </div>
+    </div>
 
-                    // returns boolean of whether or not is visible on screen
-                    $('.window:eq(0)').isOnScreen();
+  </div>
 
-                    // get most visible window
-                    $('.window').getCurrentWindow();
-
-
-                </pre>
-            </div>
-        </section>
-
-        <section id="5" class="window">
-            <div class="content">
-                <a href="https://github.com/nick-jonas/nick-jonas.github.com/tree/master/windows" title="Download Me!" id="btn-wrap">
-                    <span class="title">Download Me</span>
-                    <div id="info">
-                        <p>
-                            <strong>Version 0.0.1 /</strong>
-                            <span>1 MB</span>
-                        </p>
-                    </div>
-                </a>
-
-                <iframe src="http://ghbtns.com/github-btn.html?user=nick-jonas&repo=windows&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="156px" height="30px" style="margin:50px 0 0 50px;"></iframe>
-
-            </div>
-        </section>
-        -->
-
-        <script>
-
-            $(document).ready(function(){
-
-                var $windows = $('.window');
-
-                $windows.windows({
-                    snapping: true,
-                    snapSpeed: 100,
-                    snapInterval: 300,
-                    onScroll: function(s){},
-                    onSnapComplete: function($el){},
-                    onWindowEnter: function($el){}
-                });
-
-                $('a[href^="#"]').on('click',function (e) {
-                    e.preventDefault();
-
-                    var target = this.hash;
-                    var $target = $(target);
-
-                    $('html, body').stop().animate({
-                        'scrollTop': $target.offset().top
-                    }, 900, 'swing', function () {
-                        window.location.hash = target;
-                    });
-                });
-
-            });
-        </script>
-
-    </body>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
 </html>
