@@ -277,54 +277,91 @@
     <div class="docs-section" id="milestones">
       <h6 class="docs-header">Project Milestones</h6>
 
-      <div class="center-ul-two-wide">
+      <div class="center-ul-one">
         <h6>January</h6>
-        <ul>
-          <li>Idea was born</li>
-        </ul>
+        <div class="row">
+          <div class="six columns">
+            <img src="images/idea.png" />
+          </div>
+          <div class="six columns">
+            <ul>
+              <li>Idea was born</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <br />
-      <div class="center-ul-two-wide">
+      <div class="center-ul-one">
         <h6>February</h6>
-        <ul>
-          <li>Proposal submitted</li>
-          <li>Started web server implementation with Django</li>
-        </ul>
+        <div class="row">
+          <div class="six columns">
+            <img src="images/proposal.png" />
+          </div>
+          <div class="six columns">
+            <ul>
+              <li>Proposal submitted</li>
+              <li>Started web server implementation with Django</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <br />
-      <div class="center-ul-two-wide">
+      <div class="center-ul-one">
         <h6>March</h6>
-        <ul>
-          <li>Started station implementation using two python scripts - a beacon scanner and a lightweight Flask server to receive messages from web server</li>
-          <li>Added registration, unregistration, creating stations and items, calculating closest station and room for items on web server</li>
-          <li>Feasability testing of item finder begins</li>
-          <li>Item Finder changed from BLE mini/Atmega to BBB</li>
-          <li>Code for Item Finder able to control LEDs, receive inputs, track RSSI value of specific UUID</li>
-          <li>PCB layout finished (picture of schematic/layout)</li>
-        </ul>
+        <div class="row">
+          <div class="six columns">
+            <img class="image-small" src="images/layout.png" />
+            <img class="image-small" src="images/schematic.png" />
+          </div>
+          <div class="six columns">
+            <ul>
+              <li>Started station implementation using two python scripts - a beacon scanner and a lightweight Flask server to receive messages from web server</li>
+              <li>Added registration, unregistration, creating stations and items, calculating closest station and room for items on web server</li>
+              <li>Feasability testing of item finder begins</li>
+              <li>Item Finder changed from BLE mini/Atmega to BBB</li>
+              <li>Code for Item Finder able to control LEDs, receive inputs, track RSSI value of specific UUID</li>
+              <li>PCB layout finished (picture of schematic/layout)</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <br />
-      <div class="center-ul-two-wide">
+      <div class="center-ul-one">
         <h6>April</h6>
-        <ul>
-          <li>Station implementation changed to send data whenever beacon signal strength changed beyond a certain threshold, instead of sending all beacons at set intervals</li>
-          <li>Item Finder detects loss of signal, turns off LEDs</li>
-          <li>Item Finder finished</li>
-          <li>Switched web server implementation to using Meteor to improve real time updates on web server. Refined UI. Updating stations with the latest IP address of the web server using WIFI and Bluetooth</li>
-          <li>Used external Meteor web app to allow stations to get the IP of the web server</li>
-          <li>Poster made</li>
-        </ul>
+        <div class="row">
+          <div class="six columns">
+            <img class="image-small" src="images/udoo-and-addon.jpg" />
+            <img class="image-small" src="images/zach.jpg" />
+          </div>
+          <div class="six columns">
+            <ul>
+              <li>Station implementation changed to send data whenever beacon signal strength changed beyond a certain threshold, instead of sending all beacons at set intervals</li>
+              <li>Item Finder detects loss of signal, turns off LEDs</li>
+              <li>Item Finder finished</li>
+              <li>Switched web server implementation to using Meteor to improve real time updates on web server. Refined UI. Updating stations with the latest IP address of the web server using WIFI and Bluetooth</li>
+              <li>Used external Meteor web app to allow stations to get the IP of the web server</li>
+              <li>Poster made</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <br />
-      <div class="center-ul-two-wide">
+      <div class="center-ul-one">
         <h6>May</h6>
-        <ul>
-          <li>Station implementation switched back to sending all beacons received in a 5 second time frame, averaging received signal strengths from each beacon</li>
-          <li>Added robustness</li>
-          <li>Final demo</li>
-          <li>Final report and video finished</li>
-          <li>Decided on a name for the hardware</li>
-        </ul>
+        <div class="row">
+          <div class="six columns">
+            <img class="image-small" src="images/demo.jpg" />
+          </div>
+          <div class="six columns">
+            <ul>
+              <li>Station implementation switched back to sending all beacons received in a 5 second time frame, averaging received signal strengths from each beacon</li>
+              <li>Added robustness</li>
+              <li>Final demo</li>
+              <li>Final report and video finished</li>
+              <li>Decided on a name for the hardware</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -350,7 +387,7 @@
           <li><a href="https://docs.google.com/document/d/1-dtoBcfd880Tg1K-qXevHPyI3KualLOqbTmpe1Op-nE/edit?usp=sharing">Design Proposal</a></li>
           <li><a href="https://docs.google.com/document/d/13yrqqMe9oGFQke3zbxYNEqzXuK4ii-JyaY0JF9EnSS8/edit?usp=sharing">Changelog</a></li>
           <li><a href="https://github.com/njansen28/addon/raw/master/18-549-team08.pptx">Poster</a></li>
-          <li><a href="https://docs.google.com/document/d/1yRo1kn4FOCZBvyN8lGXbOtuuVWnaq4DZx081sZ0hEUk/edit?usp=sharing">Final Report</a></li>
+          <li><a href="https://docs.google.com/document/d/1aYjQATdwJUg1-8uJPrELs3SGRkYBi1S1byqtjqmwxIU/edit?usp=sharing">Final Report</a></li>
           <li><a href="">Pitch Video</a></li>
         </ul>
       </div>
