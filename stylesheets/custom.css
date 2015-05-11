@@ -169,10 +169,11 @@ ul {
     width: 100%; }
   .navbar-list {
     list-style: none;
+    text-align: center;
     margin-bottom: 0; }
   .navbar-item {
     position: relative;
-    float: left;
+    display: inline;
     margin-bottom: 0; }
   .navbar-link {
     text-transform: uppercase;
